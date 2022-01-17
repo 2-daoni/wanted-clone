@@ -1,19 +1,25 @@
 .slide-container {
   margin-top: 25px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
-.slides img {
-  display: none;
+.slides {
+  visibility: hidden;
   width: 1060px;
 }
 
-.slides .active {
-  display: block;
+.text,
+.title,
+.text-container {
+  visibility: hidden;
+}
+
+.active {
+  visibility: visible;
 }
 
 .slides .prevImg {
@@ -60,13 +66,48 @@
 }
 
 .slide-btn .prevBtn {
-  position: relative;
-  top: -150px;
-  left: -100px;
+  position: absolute;
+  top: 250px;
+  left: 50px;
 }
 
 .slide-btn .nextBtn {
+  position: absolute;
+  top: 250px;
+  right: 50px;
+}
+
+.text-container {
+  background-color: #fff;
   position: relative;
-  top: -150px;
-  right: -100px;
+  left: 170px;
+  bottom: 170px;
+  width: 330px;
+  height: 146px;
+  border-radius: 4px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.title.active {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.text.active {
+  margin: 5px 10px 20px 15px;
+  font-size: 14px;
+}
+
+.root {
+  color: #36f;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+hr {
+  border: 1px solid #ececec;
 }

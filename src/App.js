@@ -1,11 +1,11 @@
 import GNB from './GNB.js';
-import Slide from './Slide.js';
+import SlideFunction from './SlideFunction.js';
 
 function App() {
   return (
     <div>
       <GNB></GNB>
-      <Slide></Slide>
+      <SlideFunction></SlideFunction>
     </div>
   );
 }

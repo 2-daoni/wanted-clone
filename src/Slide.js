@@ -8,9 +8,9 @@ const Slide = () => {
 
   const [slideIndex, setSlideIndex] = useState(1);
 
-  const NextSlide = () => {
+  const NextSlide = ({ autoflow = 3000 }) => {
     if (slideIndex !== imagesSlide.length) {
-      setSlideIndex(slideIndex + 1);
+      setSlideIndex(slideIndex + 1, autoflow);
       slides.current.style.transform = `translate3d(-${1084 * slideIndex - (window.innerWidth - 1060) / 2 + 50}px, 0, 0)`;
     } else if (slideIndex === imagesSlide.length) {
       setSlideIndex(imagesSlide.length / 3);
@@ -18,9 +18,9 @@ const Slide = () => {
     }
   };
 
-  const PrevSlide = () => {
+  const PrevSlide = ({ autoflow = 3000 }) => {
     if (slideIndex !== 1) {
-      setSlideIndex(slideIndex - 1);
+      setSlideIndex(slideIndex - 1, autoflow);
       slides.current.style.transform = `translate3d(-${1084 * slideIndex - (window.innerWidth - 1060) / 2 + 50}px, 0, 0)`;
     } else if (slideIndex === 1) {
       setSlideIndex(imagesSlide.length / 3);
@@ -62,4 +62,5 @@ const Slide = () => {
     </>
   );
 };
+
 export default Slide;

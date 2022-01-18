@@ -1,21 +1,16 @@
 .slide-container {
   margin-top: 25px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
   overflow: hidden;
+  padding-left: 50px;
+  transition: 0.5s;
 }
 
 .slides {
-  visibility: hidden;
   width: 1060px;
-}
-
-.text,
-.title,
-.text-container {
-  visibility: hidden;
+  margin-right: 30px;
+  padding: 0 12px;
 }
 
 .active {
@@ -67,21 +62,21 @@
 
 .slide-btn .prevBtn {
   position: absolute;
-  top: 250px;
+  top: 200px;
   left: 50px;
 }
 
 .slide-btn .nextBtn {
   position: absolute;
-  top: 250px;
+  top: 200px;
   right: 50px;
 }
 
 .text-container {
   background-color: #fff;
   position: relative;
-  left: 170px;
-  bottom: 170px;
+  left: 45px;
+  bottom: 175px;
   width: 330px;
   height: 146px;
   border-radius: 4px;
@@ -105,9 +100,39 @@
   font-size: 14px;
   font-weight: 700;
   margin-left: 15px;
-  margin-top: 5px;
+  margin-top: 13px;
+  cursor: pointer;
 }
 
 hr {
   border: 1px solid #ececec;
+}
+
+.title {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.text {
+  font-size: 14px;
+  margin: 5px 0 30px 20px;
+}
+
+@media screen and (max-width: 770px) {
+  .slides {
+    width: 590px;
+    height: 183px;
+    padding: 0;
+    border-radius: 4px;
+  }
+  .text-container {
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+    width: 100%;
+  }
+  .slide-btn {
+    display: none;
+  }
 }

@@ -60,6 +60,14 @@ a {
   font-size: 14px;
 }
 
+.link li:first-child {
+  display: none;
+}
+
+.link a:hover {
+  border-bottom: 3px solid #e1e2e3;
+}
+
 .NewText,
 .BetaText {
   position: relative;
@@ -82,6 +90,8 @@ a {
 
 .bell {
   color: #000;
+  position: relative;
+  margin-right: 10px;
 }
 
 .newBadge {
@@ -98,8 +108,15 @@ a {
   position: absolute;
 }
 
-.bell.newBadge {
-  top: -5px;
+.bell .newBadge {
+  top: 1px;
+  right: -1px;
+}
+
+.profileC .newBadge {
+  top: -6px;
+  position: absolute;
+  right: -5px;
 }
 
 .profileBox {
@@ -117,6 +134,8 @@ a {
   border: 1px solid #e1e2e3;
   border-radius: 50%;
   align-items: center;
+  position: relative;
+  margin-right: 30px;
 }
 
 .profile {
@@ -127,17 +146,6 @@ a {
   top: -24px;
   left: -10px;
 }
-
-/* .bellN,
-.profileN {
-  border-radius: 5px;
-  background-color: rgb(51, 102, 255);
-  width: 13px;
-  height: 13px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .serviceBtn {
   color: #666;
@@ -157,7 +165,7 @@ a {
   width: 1px;
   background-color: rgba(77, 75, 75, 0.5);
   position: relative;
-  left: -30px;
+  left: -10px;
 }
 
 .serviceBtn a {
@@ -165,4 +173,65 @@ a {
   justify-content: center;
   align-items: center;
   color: #666;
+}
+
+.etc-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.etc-container .dot {
+  display: none;
+}
+
+@media screen and (max-width: 1300px) {
+  .logo {
+    margin-left: 60px;
+  }
+  .serviceBtn {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .link a {
+    padding: 7px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100px;
+  }
+  .link {
+    margin-left: 70px;
+  }
+  .serviceBtn,
+  .profileC {
+    display: none;
+  }
+  .etc-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 20px;
+    top: 65px;
+  }
+  .etc-container .dot {
+    display: block;
+  }
+  .text-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .link li:first-child {
+    display: block;
+  }
+  .link li:nth-child(n + 4) {
+    display: none;
+  }
 }

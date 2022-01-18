@@ -25,10 +25,8 @@ const SlideFunction = () => {
     <>
       {images.map((slide, index) => {
         return (
-          <div key={slide.id}>
-            <div key={slide.id} className="slide-container">
-              <img src={slide.image} key={slide.id} className={slideIndex === index + 1 ? 'slides active' : 'slides'} />
-            </div>
+          <div key={slide.id} className="slide-container">
+            <img src={slide.image} key={slide.id} className={slideIndex === index + 1 ? 'slides active' : 'slides'} />
             <div className={slideIndex === index + 1 ? 'text-container active' : 'text-container'}>
               <h3 key={slide.title} className={slideIndex === index + 1 ? 'title active' : 'title'}>
                 {slide.title}
